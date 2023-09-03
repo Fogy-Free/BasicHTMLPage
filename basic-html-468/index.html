@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic HTML</title>
+  <style>
+    body {
+      background-color: black;
+      text-align: center;
+      gap: 1em;
+      margin: 5px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    textarea {
+      align-self: center;
+      color: #e3b200;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
+      background: transparent;
+      border-radius: 5px;
+      border: none;
+    }
+    h1{
+      margin: 5px;
+      color: sienna;
+      font-size: 40px;
+      text-shadow: 0 0 2px orange;
+    }
+    p {
+      color: orange;
+      font-size: 20px;
+      text-shadow: 0 0 2px sienna;
+    }
+    button {
+      color: yellow;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Basic HTML Template</h1>
+<p>Lets Go! &nbsp;<button onclick="copyCode()">Copy</button></p>
+<textarea id="code" rows="15" cols="50">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;&lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+      &lt;h1&gt;Basic HTML Template&lt;/h1&gt;
+      &lt;p&gt;Lets Go!&lt;/p&gt;
+    &lt;script&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </textarea>
+<p>Use the copy button, paste it into a notepad++</p>
+<p>and save as html file. You made a webpage, YAY!</p>
+<p>Double-click the file to see your page.</p>
+<script>
+  function copyCode() {
+    var copyText = document.getElementById("code");
+    copyText.select();
+    document.execCommand("copy");
+    // alert("HTML code copied!");
+  }
+</script>
+</body>
+</html>
